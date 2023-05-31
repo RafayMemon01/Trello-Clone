@@ -5,7 +5,7 @@ body {
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     /* font-family: 'Kanit', sans-serif; */
     font-family: 'Roboto', sans-serif;
-    background-image: url('./Assets/Image/bg.jpg');
+    /* background-image: url('./Assets/Image/bg.jpg'); */
 }
 .colorBlack {
     color: black;
@@ -54,7 +54,8 @@ main .createNew{
 main .createNew input{
     min-width: 15em;
     width: 80%;
-    height: 2.2em;
+    min-height: 2.2em;
+    /* height: 2.2em; */
     text-align: center;
     /* border: 1px solid red; */
     border-radius: .5em;
@@ -83,13 +84,15 @@ main .mainContent .subContent{
     border: 1.8px solid blue;
     min-width: 15em;
     min-height: 5em;
-    max-height: 100%;
+    max-height: 15em;
     margin: 2em;
     border-radius: 1em;
     display: flex;
     flex-direction: column;
     padding: .1em;
     background-color: aliceblue ;
+    overflow-y: scroll;
+
 }
 main .mainContent .subContent:hover{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -119,5 +122,33 @@ main .mainContent .subContent .newTiketButton{
     justify-content: center;
     text-align: center;
     overflow-y:scroll ;
+    min-height: 2.2em;
+}
+.tiket{
+    margin-left:  .5em;
+    margin-right: .5em ;
+    margin-bottom: .5em;
+    border-radius: .5em;
+    padding-top:.5em;
+    /* background-color: rgba(240, 248, 255, 0.137); */
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: bold;
+    width: 90%;
+    height: 2.2em;
+    border-radius: .5em;
+    font-size: medium;
+    /* justify-content: center; */
+    text-align: center;
+    align-items: center;
+    /* overflow-y:scroll ; */
+}
+.tiket span,i{
+    margin-left:  1em;
+    margin-right: 1em ;
+    /* margin-top: .5em; */
 }
 

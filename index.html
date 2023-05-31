@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title class="title">Trello-Clone</title>
+    <link rel="shortcut icon" href="./Assets/Image/Icon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -29,22 +30,24 @@
         <div class="mainContent">
             <div class="subContent" draggable="true">
                 <h3 id="heading">ToDo</h3>
-                <div class="subContentList">
-                    <ul>
-                        <li>
-                            <div class="subContent__item" draggable="true">Hello World</div>
-                        </li>
-                    </ul>
+                <div class="tikets">
+                    <div class="tiket" draggable="true"><span>ABC</span><i class="bi bi-trash3-fill"></i></div>
                 </div>
-                    <input class="newTiketButton" type="text" placeholder="Create New Task">
+                    <input class="newTiketButton" type="text" placeholder="Create New Task" onkeydown="fun3(event)">
             </div>
             <div class="subContent" draggable="true">
                 <h3 id="heading">Doing</h3>
-                    <input class="newTiketButton" type="text" placeholder="Create New Task">
+                <div class="tikets">
+
+                </div>
+                    <input class="newTiketButton" type="text" placeholder="Create New Task" onkeydown="fun3(event)">
             </div>
             <div class="subContent" draggable="true">
                 <h3 id="heading">Done</h3>
-                    <input class="newTiketButton" type="text" placeholder="Create New Task">
+                <div class="tikets">
+                    
+                </div>
+                    <input class="newTiketButton" type="text" placeholder="Create New Task" onkeydown="fun3(event)">
             </div>
 
         </div>

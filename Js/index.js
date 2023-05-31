@@ -43,3 +43,26 @@ let fun2 = function fun2(event) {
         newElement.appendChild(newInput)
 
 }
+
+let fun3 = function fun3(event) {
+    console.log("fun3 Working")
+    if (event.keyCode == 13){
+        console.log("enterpressed");
+        let tiketsDiv = document.querySelector(".tikets");
+        let userValue = document.querySelector(".newTiketButton").value;
+        // let userValue2 = document.querySelector(".newTiketButton")
+        let newTiket =  document.createElement('div')
+        let tiketSpan = document.createElement('span')
+        let iconI     = document.createElement('i')
+        newTiket.className += 'tiket';
+        newTiket.setAttribute("draggable","true")
+        iconI.className += 'bi'
+        iconI.className += ' bi-trash3-fill'
+        tiketSpan.innerHTML = userValue
+        newTiket.appendChild(tiketSpan)
+        newTiket.appendChild(iconI)
+        tiketsDiv.appendChild(newTiket)
+        console.log(newTiket)
+
+    }
+}
