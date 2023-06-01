@@ -5,7 +5,7 @@ body {
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     /* font-family: 'Kanit', sans-serif; */
     font-family: 'Roboto', sans-serif;
-    /* background-image: url('./Assets/Image/bg.jpg'); */
+    background-image: url('R.jpg');
 }
 .colorBlack {
     color: black;
@@ -151,4 +151,56 @@ main .mainContent .subContent .newTiketButton{
     margin-right: 1em ;
     /* margin-top: .5em; */
 }
+footer {
+    background-color: rgba(252, 254, 73, 1);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.2);
+  }
+  
+  .footer-text {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  footer {
+    background-color: aliceblue;
+    color: #000;
+    padding: 20px;
+    border: 1px solid white ;
+    margin-top: 10%;
+  }
+  
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .social-icons a {
+    color: #000;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .footer-text {
+    font-size: 14px;
+  }
 

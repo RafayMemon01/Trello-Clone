@@ -1,5 +1,10 @@
 console.log("Hello World");
-console.log(newElemtInput)
+console.log(newElemtInput);
+
+// 
+// rem.addEventListener("click", function(event) {
+// event.target.parentElement.remove()
+// })
 let fun = function fun(event) {
     console.log("funWorking")
     if (event.keyCode == 13) {
@@ -14,6 +19,7 @@ let fun = function fun(event) {
         newElement.className += 'subContent'
         newElement.setAttribute("draggable","true")
         newInput.setAttribute("placeholder","Create New Task")
+        newInput.setAttribute("onKeydown","fun3(event)")
         console.log(newElement)
         console.log(newHeading)
         let mainContent = document.querySelector(".mainContent");
@@ -41,9 +47,13 @@ let fun2 = function fun2(event) {
         mainContent.appendChild(newElement);
         newElement.appendChild(newHeading);
         newElement.appendChild(newInput)
-
+        
 }
 
+// const rem = document.querySelector(".bi-trash3-fill")
+// rem.addEventListener("click", function(event) {
+// event.target.parentElement.parentElement.remove()
+// })
 let fun3 = function fun3(event) {
     console.log("fun3 Working")
     if (event.keyCode == 13){
@@ -56,13 +66,26 @@ let fun3 = function fun3(event) {
         let iconI     = document.createElement('i')
         newTiket.className += 'tiket';
         newTiket.setAttribute("draggable","true")
+        let abc = event.target.previousElementSibling
         iconI.className += 'bi'
         iconI.className += ' bi-trash3-fill'
+        iconI.setAttribute("onClick","newfun()")
+        tiketSpan.setAttribute("contentEditable","true")
         tiketSpan.innerHTML = userValue
         newTiket.appendChild(tiketSpan)
         newTiket.appendChild(iconI)
-        tiketsDiv.appendChild(newTiket)
+        abc.appendChild(newTiket)
         console.log(newTiket)
 
     }
 }
+function newfun(event) {
+    let rem1 = document.querySelector(".bi-trash3-fill");
+    rem1.addEventListener("mousedown", function(event) {
+        event.target.parentNode.remove();
+        console.log("New Fun Working")
+    });
+}
+document.addEventListener('click', function(e){
+    console.log(e.target.className)
+})
