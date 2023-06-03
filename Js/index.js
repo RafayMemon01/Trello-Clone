@@ -9,6 +9,7 @@ let fun = function(event) {
         let newInput = document.createElement("input");
         newHeading.id = 'heading';
         newInput.className = 'newTiketButton';
+        newInput.setAttribute("name","tiketText")
         let newElemtInput = document.querySelector("#newElemtInput").value;
         newHeading.innerHTML = newElemtInput;
         newElement.className = 'subContent';
@@ -50,7 +51,11 @@ let fun3 = function(event) {
     if (event.keyCode == 13) {
         console.log("enterpressed");
         let tiketsDiv = document.querySelector(".tikets");
+        console.log(event)
+
         let userValue = document.querySelector(".newTiketButton").value;
+        
+
         let newTiket = document.createElement('div');
         let tiketSpan = document.createElement('span');
         let iconI = document.createElement('i');
