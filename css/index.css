@@ -5,13 +5,16 @@ body {
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     /* font-family: 'Kanit', sans-serif; */
     font-family: 'Roboto', sans-serif;
-    background-image: url('R.jpg');
+    background-image: url('../Assets/Image/R.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .colorBlack {
     color: black;
 }
 header{
-    background-color: aliceblue;
+    background-color: rgba(240, 248, 255, 0.37);
     min-height: 4em;
     /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
     border: 1px solid blue;
@@ -61,6 +64,8 @@ main .createNew input{
     border-radius: .5em;
     margin: .5em;
     border: 2px solid blue;
+    background-color: rgba(240, 248, 255, 0.37);
+    color: black;
 
 }
 main .createNew input:focus{
@@ -90,13 +95,50 @@ main .mainContent .subContent{
     display: flex;
     flex-direction: column;
     padding: .1em;
-    background-color: aliceblue ;
+    background-color: rgba(240, 248, 255, 0.37);
     overflow-y: scroll;
 
+}
+.gridBlock{
+    display: none;
 }
 main .mainContent .subContent:hover{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     
+}
+/* main .mainContent::-webkit-scrollbar{
+    width: .5em;
+    height: 80%;
+    background-color: aliceblue;
+    border-radius: 5em;
+    border: 1px solid blue;
+    
+}
+main .mainContent::-webkit-scrollbar-track{
+    background-color: aliceblue;
+}
+main .mainContent::-webkit-scrollbar-thumb{
+    background-color: blue;
+}
+main .mainContent::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(86, 86, 255);
+}
+main .mainContent::-webkit-scrollbar{
+    width: .5em;
+    height: 80%;
+    background-color: aliceblue;
+    border-radius: 5em;
+    border: 1px solid blue;
+    
+} */
+main .mainContent .subContent::-webkit-scrollbar-track{
+    background-color: aliceblue;
+}
+main .mainContent .subContent::-webkit-scrollbar-thumb{
+    background-color: blue;
+}
+main .mainContent .subContent.subContent::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(86, 86, 255);
 }
 main .mainContent .subContent #heading{
     border: none;
@@ -181,11 +223,14 @@ footer {
     margin-top: 10px;
   }
   footer {
-    background-color: aliceblue;
+    background-color: rgba(240, 248, 255, 0.37);
     color: #000;
     padding: 20px;
     border: 1px solid white ;
-    margin-top: 10%;
+    margin-top: 11.8%;
+  }
+  footer:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   
   .footer-content {
@@ -197,10 +242,22 @@ footer {
   .social-icons a {
     color: #000;
     font-size: 20px;
-    margin-right: 10px;
+    margin-right: -.9em;
   }
   
   .footer-text {
     font-size: 14px;
   }
+
+
+  
+
+ 
+  
+  
+  
+  
+  
+  
+  
 

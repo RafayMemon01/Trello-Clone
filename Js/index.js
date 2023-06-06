@@ -1,5 +1,6 @@
 console.log("Hello World");
 
+// first input function when user press enter 
 let fun = function(event) {
     console.log("funWorking");
     if (event.keyCode == 13) {
@@ -24,26 +25,28 @@ let fun = function(event) {
         newElement.appendChild(newInput);
     }
 };
-
+// first input when user click on add 
 let fun2 = function(event) {
     console.log("fun2Working");
     console.log("Clicked On ADD");
     let newElement = document.createElement("div");
-    let newHeading = document.createElement("h1");
-    let newInput = document.createElement("input");
-    newHeading.id = 'heading';
-    newInput.className = 'newTiketButton';
-    let newElemtInput = document.querySelector("#newElemtInput").value;
-    newHeading.innerHTML = newElemtInput;
-    newElement.className = 'subContent';
-    newElement.setAttribute("draggable", "true");
-    newInput.setAttribute("placeholder", "Create New Task");
-    console.log(newElement);
-    console.log(newHeading);
-    let mainContent = document.querySelector(".mainContent");
-    mainContent.appendChild(newElement);
-    newElement.appendChild(newHeading);
-    newElement.appendChild(newInput);
+        let newHeading = document.createElement("h1");
+        let newInput = document.createElement("input");
+        newHeading.id = 'heading';
+        newInput.className = 'newTiketButton';
+        newInput.setAttribute("name","tiketText")
+        let newElemtInput = document.querySelector("#newElemtInput").value;
+        newHeading.innerHTML = newElemtInput;
+        newElement.className = 'subContent';
+        newElement.setAttribute("draggable", "true");
+        newInput.setAttribute("placeholder", "Create New Task");
+        newInput.setAttribute("onkeydown", "fun3(event)");
+        console.log(newElement);
+        console.log(newHeading);
+        let mainContent = document.querySelector(".mainContent");
+        mainContent.appendChild(newElement);
+        newElement.appendChild(newHeading);
+        newElement.appendChild(newInput);
 };
 
 let fun3 = function(event) {
@@ -53,8 +56,9 @@ let fun3 = function(event) {
         let tiketsDiv = document.querySelector(".tikets");
         console.log(event)
 
-        let userValue = document.querySelector(".newTiketButton").value;
-        
+        let userValue = event.target.value
+
+        console.log(userValue);
 
         let newTiket = document.createElement('div');
         let tiketSpan = document.createElement('span');
@@ -73,9 +77,34 @@ let fun3 = function(event) {
         newTiket.appendChild(iconI);
         abc.appendChild(newTiket);
         console.log(newTiket);
+        
+        newTiket.addEventListener("")
+    
     }
 };
 
-document.addEventListener('click', function(e) {
-    console.log(e.target.className);
-});
+// document.addEventListener('click', function(e) {
+//     console.log(e.target.className);
+// });
+
+
+// let onTheMoveElm =  undefined;
+// allTikets = document.querySelectorAll(".tiket");
+// allTikets.array.forEach(tiketElm => {
+//     tiketElm.addEventListener('mousedown',function (e){
+//         console.log("e.path: ", e.target.className);
+//         onTheMoveElm = e.target;
+        
+//     })
+// });
+// const subContent = document.querySelector('.subContent');
+// new SimpleBar(subContent);
+let open = function newblock(e){
+    let block = document.querySelector(".gridBlock")
+    if(block.style.display == "none"){
+        block.style.display = "block";
+        e.target.style.color = "red";
+        }else{
+            block.style.display = "none";
+    }
+}
