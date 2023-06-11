@@ -82,7 +82,7 @@ main .createNew .addButton{
 }
 main .mainContent{
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
     margin-top: 5em;
 }
 main .mainContent .subContent{
@@ -96,7 +96,7 @@ main .mainContent .subContent{
     flex-direction: column;
     padding: .1em;
     background-color: rgba(240, 248, 255, 0.37);
-    overflow-y: scroll;
+    overflow-y: auto    ;
 
 }
 .gridBlock{

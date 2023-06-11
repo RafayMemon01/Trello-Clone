@@ -64,6 +64,8 @@ let fun3 = function(event) {
         let tiketSpan = document.createElement('span');
         let iconI = document.createElement('i');
         newTiket.className = 'tiket';
+        // newTiket.setAttribute("ondragstart","drag(event)")
+        // newTiket.setAttribute("id","drag1")
         newTiket.setAttribute("draggable", "true");
         let abc = event.target.previousElementSibling;
         iconI.className = 'bi bi-trash3-fill';
@@ -78,33 +80,12 @@ let fun3 = function(event) {
         abc.appendChild(newTiket);
         console.log(newTiket);
         
-        newTiket.addEventListener("")
+        // newTiket.addEventListener("")
     
     }
+    let dragitem = document.querySelector(".tiket")
+    let dropbox = document.querySelector(".tikets")
+        dragitem.addEventListener("ondrag",(e)=>{
+            console.log(e)
+            })
 };
-
-// document.addEventListener('click', function(e) {
-//     console.log(e.target.className);
-// });
-
-
-// let onTheMoveElm =  undefined;
-// allTikets = document.querySelectorAll(".tiket");
-// allTikets.array.forEach(tiketElm => {
-//     tiketElm.addEventListener('mousedown',function (e){
-//         console.log("e.path: ", e.target.className);
-//         onTheMoveElm = e.target;
-        
-//     })
-// });
-// const subContent = document.querySelector('.subContent');
-// new SimpleBar(subContent);
-let open = function newblock(e){
-    let block = document.querySelector(".gridBlock")
-    if(block.style.display == "none"){
-        block.style.display = "block";
-        e.target.style.color = "red";
-        }else{
-            block.style.display = "none";
-    }
-}
